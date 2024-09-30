@@ -1,3 +1,10 @@
+/**
+ * @author Akhil Devarapalli
+ * This is the Reporting structure class. It has getter and setter methods
+ * for the different fields of the reporting structure. It also has a equals
+ * method and a hash method to determine if a different instance of the class
+ * is equal to the current one. 
+ */
 package com.mindex.challenge.data;
 
 import java.util.Objects;
