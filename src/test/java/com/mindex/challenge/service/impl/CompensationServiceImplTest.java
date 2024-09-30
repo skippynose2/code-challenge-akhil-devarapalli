@@ -69,12 +69,12 @@ public class CompensationServiceImplTest {
     @Test
     public void testCreateReadUpdate() {
         Compensation compensationTest = new Compensation();
-        compenstationTest.setEmployee(testEmployeeOne);
+        compensationTest.setEmployee(testEmployeeOne);
         compensationTest.setSalary(56000.45);
         compensationTest.setEffectiveDate("2024-12-09T00:00:00Z");
 
         // checking the create
-        ResponseEntity createdCompensationResponse = restTemplate.postForEntity(createCompensationUrl, testCompensation, Compensation.class);
+        ResponseEntity createdCompensationResponse = restTemplate.postForEntity(createCompensationUrl, compensationTest, Compensation.class);
         assertEquals(HttpStatus.OK, createdCompensationResponse.getStatusCode());
         Compensation createdCompensation = (Compensation)createdCompensationResponse.getBody();
         assertNotNull(createdCompensation);
